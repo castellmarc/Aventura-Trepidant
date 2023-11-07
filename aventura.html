@@ -1,40 +1,139 @@
-<!DOCTYPE html> 
+Learn to code — free 3,000-hour curriculum
+
+MARCH 29, 2023
+/
+#GAME DEVELOPMENT
+How to Code a Simple Game and Host it on Your Website
+Shane Duggan
+Shane Duggan
+How to Code a Simple Game and Host it on Your Website
+Have you ever wanted to create your own game to share with others on your website? In this article, we'll be learning how to code a simple game using HTML, CSS, and JavaScript, and then host it on your website.
+
+The game we'll be coding is a classic word-guessing game – Melting Snowman!
+
+HTML, CSS, and JavaScript are some of the most classic languages for web development. There’s a certain charm and simplicity that comes with the old-school building blocks, coupled with the fact that it's relatively simple for beginners to learn and get it up on a hosted website, which inspired this tutorial.
+
+Using these beginner-friendly web development languages to code the game, we'll walk through each step of the process. Whether you're new to coding or a seasoned developer, you'll be able to follow along and create your own version of Melting Snowman.
+
+Plus, including projects in your résumé when applying for a software or programming role can be a great way to boost your chances of landing a job.
+
+Once we've created the game, we'll learn how to host it on a simple HTML page or a website builder such as WordPress. By the end of this article, you'll have a fun and interactive game to share with your website visitors. Hosted on my website, it looks something like this:
+
+Rustic-Minimal-Wedding-Print-Banner--7-
+(The game we'll be making today)
+Let's get started and learn how to code and host Melting Snowman on your website!
+
+Planning and Preparation
+Before commencing with the coding of your Melting Snowman game, it is crucial to engage in planning and preparation.
+
+This process involves choosing a programming language and development environment, collecting the necessary resources and tools required for coding the game, and determining the game's features and functionalities.
+
+How to choose a programming language and development environment
+Melting Snowman can be coded in many programming languages, including Python, Java, C++, and JavaScript. As mentioned, for this simple guide, we will code the game using HTML, CSS, and JavaScript, the popular web development languages.
+
+Doing so will also allow you to easily host your game on a variety of websites, including those of you who have websites created with no-code tools such as WordPress and Wix. With those, a simple plugin will allow you to easily host your game with minimal setup.
+
+Aside from selecting a programming language, you'll also need to choose a development environment to write and test your code. Various popular options include Visual Studio Code, Sublime Text, and Atom.
+
+These development environments are available for free download and offer features such as syntax highlighting, code completion, and debugging tools.
+
+How to gather resources and tools needed to code the game
+To efficiently code and host your Melting Snowman game, you'll need to assemble various resources and tools, including:
+
+A text editor or integrated development environment (IDE) to write your code
+A web browser to test your game
+Images to use as the Melting Snowman graphics
+Access to a web hosting service to host your game online
+How to choose the features and functionalities of the game
+Before embarking on the coding process, you should decide on the features and functionalities of your Melting Snowman game. Some possible things to think about could include:
+
+The number of permissible guesses
+The inclusion of a timer option
+The inclusion of a hint button option
+The ability to select different word categories (for example animals, movies, sports)
+The ability to keep score and track high scores
+Once you've decided on the features and functionalities of your game, you can start coding the Melting Snowman game with HTML, CSS, and JavaScript.
+
+The 5 Steps to Coding a Game of Melting Snowman
+Now we’ve reached the fun part - coding! The process of game development is often long and arduous. But for this mini project, I have broken it all down into 5 simple steps. These will have you with your Melting Snowman game running in no time. They are:
+
+Creating the HTML structure for the game
+Adding the CSS styling to make the game look visually appealing
+Writing the JavaScript code to implement the game logic and functionality
+Adding interactivity and animations
+Testing and debugging
+Let’s look at each of these steps in detail. Feel free to follow along and make any creative changes that you think of along the way.
+
+How to Create the HTML Structure for the Game
+To begin creating the Melting Snowman game, you need to initiate a new text document and reserve it with the ".html" file extension. Embed the fundamental HTML5 structure into the document, typically consisting of these fields:
+
+<!DOCTYPE html>
 <html>
-
 <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1"> 
-     <title>Single page template</title> 
-     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-     <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-</head> 
+  <meta charset="UTF-8">
+  <title>Melting Snowman Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+</body>
+</html>
+You can see that for this configuration, the HTML file is linked to a "style.css" stylesheet that we'll deal with in a bit.
 
-<body> 
+After setting up the <head> section, you'll create a <body> section that will contain the content of the webpage. There can be many sections here, such as an instructions paragraph that teaches users how to play the game. This is a simple addition, and can be churned out easily with AI. Although, since we will be hosting this on your website, be sure to check it for AI content against possible penalizations.
 
-<div data-role="page" id="page1">
+Inside the <body> section, create a <div> with a class attribute of "container". This will be the main container for the game.
 
-     <div data-role="header">
-          <h1>Single page</h1>
-     </div>
+Within the container, create an <h1> element with the text "Melting Snowman Game" as the title of the game. Below the title, create another <div> with a class attribute of "Melting Snowman". This will be where the visual representation of the Melting Snowman will be generated dynamically using JavaScript.
 
-     <div data-role="content">
-          <h1>Moo</h1>
-          <p>
-          Rock your body...
-          </p>
-          <script src="https://gist.github.com/2385560.js?file=gistfile1.txt"></script>
+Next, create a <div> with a class attribute of "word". This will be where the current word to be guessed is displayed, and it will also be dynamically generated using JavaScript. Create another <div> with a class attribute of "letters" where the letters that have been guessed will be displayed. This, too, will be generated dynamically using JavaScript.
 
- 
-          <p><a href="testa.cfm" data-role="button">Load bad</a></p>          
-          <p><a href="test2.cfm" data-role="button">Load good</a></p>          
-     </div>
-     
-     <div data-role="footer">
-          <h4>Footer content</h4>
-     </div>
-     
-</div>
+Finally, create one more <div> with a class attribute of "message". This is where the win/lose message will be displayed at the end of the game. With these HTML elements in place, you can now move on to styling the game with CSS and implementing its functionality with JavaScript. Here's what that all looks like:
 
+<div class="container">
+    <h1>Melting Snowman Game</h1>
+    <div class="Melting Snowman">
+      <!-- The Melting Snowman graphic will be dynamically generated using JavaScript -->
+    </div>
+    <div class="word">
+      <!-- The current word will be dynamically generated using JavaScript -->
+    </div>
+    <div class="letters">
+      <!-- The letters will be dynamically generated using JavaScript -->
+    </div>
+    <div class="message">
+      <!-- The win/lose message will be dynamically generated using JavaScript -->
+    </div>
+  </div>
+Similar to the stylesheet, the "MeltingSnowman.js" file will be linked to the JavaScript file to handle the game's functionality in the future.
+
+If you have been following along with these guidelines, the rudimentary HTML structure for the Melting Snowman game is good to go. Following this, we can incorporate some CSS styling to enhance the game's visual appeal.
+
+To sum up, here is the final complete HTML file snippet that we've created until this point:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Melting Snowman Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Melting Snowman Game</h1>
+    <div class="Melting Snowman">
+      <!-- The Melting Snowman graphic will be dynamically generated using JavaScript -->
+    </div>
+    <div class="word">
+      <!-- The current word will be dynamically generated using JavaScript -->
+    </div>
+    <div class="letters">
+      <!-- The letters will be dynamically generated using JavaScript -->
+    </div>
+    <div class="message">
+      <!-- The win/lose message will be dynamically generated using JavaScript -->
+    </div>
+  </div>
+  
+  <script src="MeltingSnowman.js"></script>
 </body>
 </html>
